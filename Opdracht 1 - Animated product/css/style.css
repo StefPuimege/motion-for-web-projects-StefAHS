@@ -1,0 +1,83 @@
+body {
+    margin: 50px auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e0e0e0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-areas:
+        "img img description description"
+        "img img description description"
+        "box box box box"
+        "footer footer footer footer";
+    justify-content: center;
+}
+
+.img {
+    grid-area: img;
+}
+
+.img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    grid-area: description;
+    animation: slide 1s ease-out;
+}
+
+.box {
+    grid-area: box;
+    border-radius: 20%;
+    margin: 10%;
+    background: #e0e0e0;
+    transition: all 0.2s ease-in-out;
+    padding: 10%;
+}
+
+.box:hover {
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+.box h2 {
+    margin: 0px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.new img {
+    margin: 10%;
+    max-width: 80%;
+    animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0%;
+        transform: translateX(20%);
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

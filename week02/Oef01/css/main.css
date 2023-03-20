@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    flex: 1;
+    transition: all ease-in-out 500ms;
+}
+
+.content h2 {
+    position: absolute;
+    top: 100vh;
+    margin: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+    font-size: 5rem;
+    text-align: left;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    transition: all ease-in-out 500ms;
+}
+
+.content p {
+    position: absolute;
+    top: 120vh;
+    left: 2rem;
+    transition: all ease-in-out 700ms;
+}
+
+.content:hover {
+    cursor: pointer;
+    flex: 5;
+}
+
+.content:hover h2 {
+    top: 0;
+    transform: rotate(0deg);
+    font-size: 8rem;
+}
+
+.content:hover p {
+    top: 20rem;
+}
+
+.content.content-city {
+    background-image: url(../img/city.jpg);
+}
+
+.content.content-woods {
+    background-image: url(../img/woods.jpg);
+}
+
+.content.content-beach {
+    background-image: url(../img/beach.jpg);
+}
