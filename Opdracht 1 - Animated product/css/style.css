@@ -1,16 +1,15 @@
 body {
-    margin: 50px auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #e0e0e0;
-    height: 100vh;
-    width: 100vw;
 }
 
 .content {
     display: grid;
-    grid-template-columns: repeat(4, 20vw);
-    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(4, 15vw);
+    column-gap: 4vh;
+    row-gap: 8vh;
     grid-template-areas:
+        "header header header header"
         "img img description description"
         "img img description description"
         "box1 box2 box3 box4"
@@ -18,14 +17,67 @@ body {
     justify-content: center;
 }
 
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.header .logo {
+    max-height: 100%;
+    width: 20%;
+    margin  : 2% 5% 5%;
+    transition: all 0.2s ease-in-out;
+}
+
+.header .logo:hover {
+    filter: drop-shadow(0px 0px 20px rgb(0, 0, 0));
+}
+
+.header .nav {
+    width: 40%;
+}
+
+#navl {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#navr {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header .nav a {
+    width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2em;
+    margin: 0 5%;
+    transition: all 0.2s ease-in-out;
+}
+
+.header .nav a:hover {
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 0px 20px #000000;
+}
+
 .img {
     grid-area: img;
+    display: flex;
+    justify-content: center;
     position: relative;
     top: 0;
     left: 0;
 }
 
-.img img {
+.img .product {
     max-width: 100%;
     max-height: 100%;
     position: relative;
@@ -41,9 +93,44 @@ body {
     animation: rotation 10s infinite linear;
 }
 
-.description {
+.info {
     grid-area: description;
     animation: slide 0.5s ease-out;
+}
+
+.price {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.original {
+    position: relative;
+    color: green;
+    animation: discount1 2s ease-in-out 2s 1 forwards;
+}
+
+.discount {
+    margin-left: 1rem;
+    animation: discount3 3s ease-in-out 2s 1 forwards;
+    color: green;
+    opacity: 0%;
+}
+
+.original::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0.1rem;
+    top: calc(50% - 0.05rem);
+    right: 0;
+    background-color: #800000;
+    animation: discount2 2s ease-in-out 2s 1 forwards;
+    pointer-events: none;
+}
+
+.description {
+    margin-top: 2rem;
 }
 
 .box1 {
@@ -63,24 +150,34 @@ body {
 }
 
 .box {
-    border-radius: 20%;
-    margin: 10%;
+    border-radius: 10%;
+    margin: 5%;
+    aspect-ratio: 1;
     background: #e0e0e0;
     transition: all 0.2s ease-in-out;
     padding: 10%;
+    box-shadow:  10px 10px 30px #bebebe,
+                -10px -10px 30px #ffffff;
 }
 
 .box:hover {
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+    box-shadow:  none;
 }
 
 .box h2 {
     margin: 0px;
 }
 
-.footer {
+footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+footer a {
+    margin-left: 10px;
 }
 
 @keyframes rotation {
@@ -102,5 +199,38 @@ body {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes discount1 {
+    0% {
+        color: green;
+        font-size: 1.4rem;
+    }
+    100% {
+        color: #800000;
+        font-size: 1rem;
+    }
+}
+
+@keyframes discount2 {
+    0% {
+        color: #000000;
+        width: 0%;
+    }
+    100% {
+        color: #800000;
+        width: 100%;
+    }
+}
+
+@keyframes discount3 {
+    0% {
+        transform: translateX(5rem);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 100%;
     }
 }
