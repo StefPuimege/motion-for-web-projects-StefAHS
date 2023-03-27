@@ -3,16 +3,19 @@ body {
     background: #e0e0e0;
 }
 
+h2 {
+    margin-bottom: 0.5rem;
+}
+
 .content {
     display: grid;
     grid-template-columns: repeat(4, 15vw);
-    column-gap: 4vh;
+    column-gap: 8vh;
     row-gap: 8vh;
     grid-template-areas:
         "header header header header"
         "img img description description"
-        "img img description description"
-        "box1 box2 box3 box4"
+        "img img box1 box2"
         "footer footer footer footer";
     justify-content: center;
 }
@@ -75,20 +78,22 @@ body {
     position: relative;
     top: 0;
     left: 0;
+    aspect-ratio: 1;
 }
 
 .img .product {
     max-width: 100%;
     max-height: 100%;
     position: relative;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .img .new {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: -5%;
+    left: 25%;
     max-width: 20%;
     animation: rotation 10s infinite linear;
 }
@@ -99,6 +104,7 @@ body {
 }
 
 .price {
+    display: inline-block;
     font-size: 1.4rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -108,6 +114,7 @@ body {
     position: relative;
     color: green;
     animation: discount1 2s ease-in-out 2s 1 forwards;
+    margin-left: 1rem;
 }
 
 .discount {
@@ -115,6 +122,24 @@ body {
     animation: discount3 3s ease-in-out 2s 1 forwards;
     color: green;
     opacity: 0%;
+}
+
+button {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    background: #e0e0e0;
+    transition: all 0.2s ease-in-out;
+    box-shadow:  4px 4px 10px #bebebe,
+                -4px -4px 10px #ffffff;
+    border-width: 0px;
+}
+
+button:hover {
+    box-shadow: none;
+    color: #666666;
 }
 
 .original::after {
@@ -135,37 +160,54 @@ body {
 
 .box1 {
     grid-area: box1;
+    animation: slide 0.5s 0.2s ease-out;
 }
 
 .box2 {
     grid-area: box2;
-}
-
-.box3 {
-    grid-area: box3;
-}
-
-.box4 {
-    grid-area: box4;
+    animation: slide 0.5s 0.4s ease-out;
 }
 
 .box {
+    position: relative;
     border-radius: 10%;
-    margin: 5%;
     aspect-ratio: 1;
     background: #e0e0e0;
     transition: all 0.2s ease-in-out;
     padding: 10%;
     box-shadow:  10px 10px 30px #bebebe,
                 -10px -10px 30px #ffffff;
+    justify-content: center;
 }
 
 .box:hover {
     box-shadow:  none;
+    background: rgba(224, 224, 224, 1);
 }
 
-.box h2 {
-    margin: 0px;
+.box p, .box h2 {
+    opacity: 0%;
+    transition: all 0.2s ease-in-out;
+}
+
+.box:hover p, .box:hover h2 {
+    opacity: 100%;
+    visibility: visible;
+}
+
+.box img {
+    opacity: 100%;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    max-width: 80%;
+    max-height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box:hover img {
+    opacity: 0%;
 }
 
 footer {
@@ -177,7 +219,13 @@ footer {
 }
 
 footer a {
+    color: #000000;
     margin-left: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @keyframes rotation {
