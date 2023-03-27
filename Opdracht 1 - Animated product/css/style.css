@@ -464,6 +464,7 @@ footer a:hover {
         margin: auto;
         aspect-ratio: auto;
         border-radius: 20px;
+        max-height: 100%;
     }
 
     #navl, #navr {
