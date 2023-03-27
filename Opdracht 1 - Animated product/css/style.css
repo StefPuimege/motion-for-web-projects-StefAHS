@@ -1,6 +1,7 @@
-body {
+body, html {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #e0e0e0;
+    overflow-x: hidden;
 }
 
 h2 {
