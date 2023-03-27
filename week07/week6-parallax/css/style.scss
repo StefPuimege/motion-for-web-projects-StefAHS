@@ -1,0 +1,57 @@
+body {
+    font-family: "RobotoFlex";
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.home {
+    font-size: 30rem;
+    background: url("../images/bg.webp") repeat center center;
+}
+
+.nav {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    position: sticky;
+    a {
+        display: block;
+        text-transform: uppercase;
+        font-size: calc(20vw + 20vh);
+        letter-spacing: .001em;
+        font-variation-settings: 
+            "wght" 600, 
+            "wdth" 60;
+        transition: all 0.5s ease;
+        text-decoration: none;
+        &:hover {
+            font-variation-settings: 
+                "wght" 800, 
+                "wdth" 30;
+            transform: scale(1.2);
+        }
+    }
+}
+
+main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    scroll-snap-type: mandatory;
+    section {
+        width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+    }
+}
+
+@font-face {
+    font-family: "RobotoFlex";
+    src: url("RobotoFlex.ttf") format("truetype");
+    /*  RobotoFlex-VariableFont options: 
+        slnt,wdth,wght,opsz,
+        GRAD,XTRA,YOPQ,YTAS,
+        YTDE,YTFI,YTLC,YTUC */
+}

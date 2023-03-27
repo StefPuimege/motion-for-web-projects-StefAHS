@@ -87,6 +87,13 @@ h2 {
     max-width: 100%;
     max-height: 100%;
     position: relative;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+}
+
+.img .product:hover {
+    transform: rotate(-5deg) scale(1.08);
+    filter: drop-shadow(40px 60px 40px rgba(0, 0, 0, 0.4));
 }
 
 .img .new {
@@ -100,6 +107,10 @@ h2 {
 .info {
     grid-area: description;
     animation: slideLeft 0.5s ease-out;
+}
+
+.info p {
+    margin-top: 0.5rem;
 }
 
 .price {
@@ -183,12 +194,17 @@ button:hover {
     background: rgba(224, 224, 224, 1);
 }
 
-.box p, .box h2 {
+.box p {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.box p, .box h4 {
     opacity: 0%;
     transition: all 0.2s ease-in-out;
 }
 
-.box:hover p, .box:hover h2 {
+.box:hover p, .box:hover h4 {
     opacity: 100%;
     visibility: visible;
 }
@@ -210,6 +226,7 @@ button:hover {
 }
 
 footer {
+    max-width: 100%;
     grid-area: footer;
     display: flex;
     justify-content: center;
@@ -225,6 +242,10 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 @keyframes rotation {
@@ -306,23 +327,10 @@ footer a:hover {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "img"
-            "description"
-            "box1"
-            "box2"
-            "footer";
-    }
-}
-
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1700px) {
     .content {
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 4%;
+        grid-column-gap: 10%;
         grid-row-gap: 4%;
         grid-template-areas:
             "header header"
@@ -331,9 +339,144 @@ footer a:hover {
             "footer footer";
     }
 
-    body {
-        font-size: 1.2rem;
-        padding: 4%;
+    .content {
+        max-width: 100%;
+        padding-left: 15vw;
+        padding-right: 15vw;
     }
 
+    .img .product {
+        max-height: 20vw;
+    }
+
+    .img .new {
+        max-height: 5vw;
+        left: 35%;
+    }
+
+    .img {
+        aspect-ratio: auto;
+    }
+
+    .box {
+        max-height: 20vw;
+        margin: 10% 0;
+        aspect-ratio: auto;
+        border-radius: 20px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .content {
+        grid-row-gap: 10%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .img .product {
+        max-height: 100%;
+    }
+
+    .img {
+        aspect-ratio: 1;
+    }
+
+    .box {
+        aspect-ratio: 1;
+        max-height: 100%;
+        margin: 10%;
+    }
+
+    .header .nav a {
+        font-size: 1rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .content {
+        grid-column-gap: 4%;
+        grid-row-gap: 4%;
+        max-width: 90vw;
+        margin: auto;
+        padding: 0;
+        grid-template-areas:
+        "header header"
+        "img description"
+        "box1 box2"
+        "footer footer";
+    }
+
+    .img .product {
+        max-height: 40vw;
+    }
+
+    .img .new {
+        max-height: 10vw;
+        left: 25%;
+    }
+
+    .img {
+        aspect-ratio: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .content {
+        grid-template-columns: 1fr;
+        grid-row-gap: 4%;
+        grid-template-areas:
+            "header"
+            "img"
+            "description"
+            "box1"
+            "box2"
+            "footer";
+    }
+
+    .content {
+        max-width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .img .product {
+        max-height: 30vh;
+    }
+
+    .img .new {
+        max-height: 8vh;
+        left: 37%;
+    }
+
+    .info, .box, footer {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .header .logo {
+        margin: 10px;
+        width: 40%;
+    }
+
+    .box {
+        max-width: 80%;
+        margin: auto;
+        aspect-ratio: auto;
+        border-radius: 20px;
+    }
+
+    #navl, #navr {
+        display: none;
+    }
+
+    footer {
+        display: inline-block;
+        text-align: center;
+    }
+
+    footer a {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
 }
