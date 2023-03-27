@@ -30,6 +30,7 @@ h2 {
     opacity: 0%;
     animation: slideDown 0.5s ease-out 0.5s 1 forwards;
     height: 15vh;
+    margin-top: 20px;
 }
 
 .header .logo {
