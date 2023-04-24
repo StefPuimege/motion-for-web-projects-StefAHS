@@ -1,0 +1,32 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: #222;
+  text-align: center;
+  padding: 4vw;
+}
+body h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+body h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+body ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+body ul li {
+  margin: 1em 0;
+}
+body a {
+  color: #fff;
+  text-decoration: none;
+}
+body a:hover {
+  color: rgb(180, 180, 180);
+}/*# sourceMappingURL=style.css.map */
