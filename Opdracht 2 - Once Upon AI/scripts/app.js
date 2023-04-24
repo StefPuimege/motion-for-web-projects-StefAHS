@@ -1,6 +1,6 @@
 let chapters = gsap.utils.toArray(".ch");
 
-chapters.forEach((chapter) => {
+/* chapters.forEach((chapter) => {
     gsap.from(chapter, {
         scrollTrigger: {
             trigger: chapter,
@@ -11,5 +11,14 @@ chapters.forEach((chapter) => {
         duration: 1,
         y: -300,
         opacity: 0
+    });
+}); */
+
+chapters.forEach((chapter) => {
+    gsap.from(chapter, {
+        duration: 3,
+        y: -300,
+        opacity: 0,
+        stagger: 3
     });
 });
