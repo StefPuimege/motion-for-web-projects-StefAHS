@@ -62,7 +62,7 @@ html body .timeline ul li a {
   text-shadow: none;
 }
 html body .timeline ul li:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) !important;
 }
 html body .timeline:hover {
   opacity: 0.6;
@@ -98,7 +98,7 @@ html body #title::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   background: url("../img/forest-min.jpg") rgba(30, 30, 30, 0.6);
   background-blend-mode: multiply;
@@ -116,7 +116,7 @@ html body #ch2::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   background: url("../img/donkey-min.jpg") rgba(30, 30, 30, 0.6);
   background-blend-mode: multiply;
@@ -134,7 +134,7 @@ html body #ch4::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   background: url("../img/potion-min.jpg") rgba(30, 30, 30, 0.6);
   background-blend-mode: multiply;
@@ -152,7 +152,7 @@ html body #ch6::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   background: url("../img/forest-min.jpg") rgba(30, 30, 30, 0.6);
   background-blend-mode: multiply;

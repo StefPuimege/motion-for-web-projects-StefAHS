@@ -15,16 +15,32 @@ chapters.forEach((chapter) => {
     });
 });
 
-gsap.from(".timeline ul"), {
-    duration: 0.3,
-    scale: 0.6,
-    opacity: 0,
-    x: -100,
-    stagger: 1
-};
+let timeline = gsap.timeline({});
 
-gsap.from("#title .ch"), {
-    duration: 0.3,
+timeline.from("h1", {
+    duration: 0.5,
     scale: 0.6,
     opacity: 0,
-};
+});
+
+timeline.from("h3", {
+    duration: 0.5,
+    scale: 0.6,
+    opacity: 0,
+})
+
+timeline.from(".timeline", {
+    duration: 0.5,
+    scale: 1,
+    opacity: 0,
+    x: -100
+});
+
+timeline.fromTo("li", {
+    scale: 0.1,
+}, {
+    scale: 1,
+    stagger: 0.1
+});
+
+
