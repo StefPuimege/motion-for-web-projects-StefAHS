@@ -40,7 +40,8 @@ timeline.fromTo("li", {
     scale: 0.1,
 }, {
     scale: 1,
-    stagger: 0.1
+    stagger: 0.1,
+    delay: -0.5
 });
 
 
