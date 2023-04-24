@@ -44,4 +44,45 @@ timeline.fromTo("li", {
     delay: -0.5
 });
 
+gsap.set("#potion", {rotate: 180});
 
+gsap.from("#potion", {
+    scrollTrigger: {
+        trigger: "#ch1",
+        scroller: ".parallax",
+        toggleActions: "play reverse play reverse",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true
+    },
+    rotate: 630
+});
+
+gsap.set("#donkey", {rotate: -100});
+
+gsap.from("#donkey", {
+    scrollTrigger: {
+        trigger: "#ch3",
+        scroller: ".parallax",
+        toggleActions: "play reverse play reverse",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true
+    },
+    rotate: 90,
+    scale: 0.5
+});
+
+gsap.from("#wizard", {
+    scrollTrigger: {
+        trigger: "#ch5",
+        scroller: ".parallax",
+        toggleActions: "play reverse play reverse",
+        start: "center bottom",
+        end: "top",
+        scrub: true
+    },
+    duration: 1,
+    x: 400,
+    y: -400
+});

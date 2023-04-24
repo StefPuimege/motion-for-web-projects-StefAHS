@@ -18,7 +18,7 @@ html {
             margin-left: 2vw;
             z-index: 2;
             opacity: 0.3;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.2s ease-in-out;
                     
             .line {
                 top: 0;
@@ -53,7 +53,7 @@ html {
                     justify-content: center;
                     align-content: center;
                     flex-direction: column;
-                    transition: transform 0.3s ease-in-out;
+                    transition: transform 0.2s ease-in-out;
 
                     a {
                         padding-top: 0.2rem;
@@ -69,7 +69,7 @@ html {
             }
 
             &:hover {
-                opacity: 0.6;
+                opacity: 0.6 !important;
             }
         }
     
@@ -95,9 +95,37 @@ html {
                     opacity: 1;
         
                     p {
-                        max-width: 60vw;
+                        max-width: 50vw;
                         text-align: left;
                         margin: 0 auto;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    bottom: 20vw;
+                    left: 63vw;
+                    height: 18vh;
+                    aspect-ratio: 1/1;
+                    transform: translateZ(50px);
+                    z-index: 3;
+                    filter: drop-shadow(0.1rem 0.1rem 0.4rem black);
+                }
+            }
+
+            .footer {
+                height: 50vh;
+                background-color: rgb(30, 30, 30);
+                z-index: 2;
+                position: relative;
+
+                .ch {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    p {
+                        text-align: center;
                     }
                 }
             }
@@ -118,8 +146,10 @@ html {
             transform: translateZ(-100px) scale(2);
         }
 
-        #ch1 {
-            background-color: rgb(30, 30, 30);
+        .flat {
+            background: url("../img/leafbg-min.png") rgb(30, 30, 30);
+            background-blend-mode: overlay ;
+            background-repeat: repeat;
             z-index: 2;
         }
 
@@ -138,11 +168,6 @@ html {
             transform: translateZ(-100px) scale(2);
         }
 
-        #ch3 {
-            background-color: rgb(30, 30, 30);
-            z-index: 2;
-        }
-
         #ch4::before {
             content: "";
             position: absolute;
@@ -156,11 +181,6 @@ html {
             background-size: cover;
             background-repeat: no-repeat;
             transform: translateZ(-100px) scale(2);
-        }
-
-        #ch5 {
-            background-color: rgb(30, 30, 30);
-            z-index: 2;
         }
 
         #ch6::before {
@@ -193,6 +213,7 @@ html {
         h3 {
             font-size: 1.5em;
             font-weight: 300;
+            margin: 30px 10px;
             font-style: italic;
         }
     }
