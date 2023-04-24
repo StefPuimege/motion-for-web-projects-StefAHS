@@ -14,18 +14,18 @@ html body {
 html body .timeline {
   position: fixed;
   height: 60vh;
-  width: 5vw;
+  width: 4vw;
   margin-top: 20vh;
-  margin-left: 3vw;
+  margin-left: 2vw;
   z-index: 2;
-  opacity: 0.25;
-  transition: opacity 0.2s ease-in-out;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
 }
 html body .timeline .line {
   top: 0;
   left: 0;
   background-color: rgb(180, 180, 180);
-  border: rgba(0, 0, 0, 0.6) solid 2vw;
+  border: rgba(0, 0, 0, 0.6) solid 1.7vw;
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -34,7 +34,7 @@ html body .timeline .line {
 html body .timeline ul {
   display: flex;
   height: calc(100% - 2vw);
-  width: 3vw;
+  width: 2vw;
   position: absolute;
   list-style-type: none;
   padding: 0;
@@ -53,7 +53,7 @@ html body .timeline ul li {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 html body .timeline ul li a {
   padding-top: 0.2rem;
@@ -65,7 +65,7 @@ html body .timeline ul li:hover {
   transform: scale(1.2);
 }
 html body .timeline:hover {
-  opacity: 0.75;
+  opacity: 0.6;
 }
 html body .parallax {
   perspective: 100px;
