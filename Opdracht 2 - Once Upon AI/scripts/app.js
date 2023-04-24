@@ -1,9 +1,10 @@
 let chapters = gsap.utils.toArray(".ch");
 
-/* chapters.forEach((chapter) => {
+chapters.forEach((chapter) => {
     gsap.from(chapter, {
         scrollTrigger: {
             trigger: chapter,
+            scroller: "parallax",
             toggleActions: "play reverse play reverse",
             start: "top 90%",
             end: "bottom 10%"
@@ -11,14 +12,5 @@ let chapters = gsap.utils.toArray(".ch");
         duration: 1,
         y: -300,
         opacity: 0
-    });
-}); */
-
-chapters.forEach((chapter) => {
-    gsap.from(chapter, {
-        duration: 3,
-        y: -300,
-        opacity: 0,
-        stagger: 3
     });
 });
