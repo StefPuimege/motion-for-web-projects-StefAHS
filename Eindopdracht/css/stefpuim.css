@@ -22,10 +22,9 @@
   overflow: hidden;
 }
 #stefpuim .bg #stars {
-  transform: translate3d(0, 50vh, 0) scale(2.5);
   opacity: 0;
   transform-origin: center center;
-  rotate: -90deg;
+  rotate: 0deg;
 }
 #stefpuim .segment {
   position: relative;
