@@ -173,8 +173,8 @@ function stefpuim(fase) {
             ease: "none"
         }, 20)
         .to("#stefpuim .box", {
-            border: "0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0) inset, 0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0)",
-            boxShadow: "",
+            border: "0px solid white",
+            boxShadow: "0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0) inset, 0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0)",
             duration: 1,
             ease: "none"
         }, 20)
