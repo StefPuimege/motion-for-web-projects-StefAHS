@@ -37,6 +37,11 @@ function stefpuim(fase) {
             duration: 0.01,
             ease: "none"
         }, 0)
+        .to("#stefpuim .bg #stars", {
+            transform: "translate3d(0, 50vh, 0) scale(2.5)",
+            duration: 0.01,
+            ease: "none"
+        }, 0)
         .to("#stefpuim .dot", {
             opacity: "100%",
             duration: 1,
@@ -45,6 +50,11 @@ function stefpuim(fase) {
         .to("#stefpuim .bg #stars", {
             opacity: "1",
             duration: 3,
+            ease: "none"
+        }, 0)
+        .to("#stefpuim .bg #stars", {
+            rotation: "90deg",
+            duration: 8,
             ease: "none"
         }, 0)
         // 1
