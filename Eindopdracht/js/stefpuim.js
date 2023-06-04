@@ -57,7 +57,6 @@ function stefpuim(fase) {
             duration: 24,
             ease: "none"
         }, 0)
-        // 1
         .to("#stefpuim .hour", {
             opacity: 1,
             duration: 2,
@@ -78,7 +77,6 @@ function stefpuim(fase) {
             duration: 2,
             ease: "none"
         }, 1)
-        // 3
         .to("#stefpuim .box", {
             border: "40px solid white",
             boxShadow: "0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5) inset, 0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5)",
@@ -116,7 +114,7 @@ function stefpuim(fase) {
             ease: "none"
         }, 3)
         .to("#stefpuim .bg #cloud4", {
-            left: "280vw",
+            left: "190vw",
             duration: 18,
             ease: "none"
         }, 3)
@@ -130,7 +128,22 @@ function stefpuim(fase) {
             duration: 18,
             ease: "none"
         }, 3)
-        // 5
+        .to("#stefpuim .box", {
+            left: "10vw",
+            duration: 2,
+            ease: "easeInOut"
+        }, 3)
+        .to("#stefpuim #one", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 4)
+        .to("#stefpuim .bg h1", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "easeInOut"
+        }, 4.5)
         .to("#stefpuim .bg #stars", {
             opacity: 0,
             duration: 3,
@@ -148,7 +161,6 @@ function stefpuim(fase) {
             duration: 0.5,
             ease: "none"
         }, 5.5)
-        // 6
         .to("#stefpuim .bg", {
             background: "rgb(182,77,109)",
             background: "linear-gradient(0deg, rgba(182,77,109,1) 0%, rgba(255,193,138,1) 100%)",
@@ -161,7 +173,12 @@ function stefpuim(fase) {
             duration: 0.5,
             ease: "none"
         }, 6.5)
-        // 7
+        .to("#stefpuim #two", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 7)
         .to("#stefpuim .bg", {
             background: "rgb(255,255,255)",
             background: "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,239,246,1) 100%)",
@@ -173,10 +190,28 @@ function stefpuim(fase) {
             duration: 6,
             ease: "none"
         }, 9)
+        .to("#stefpuim #three", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 9)
+        .to("#stefpuim #four", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 12.5)
         .to("#stefpuim .bg #stars", {
             rotation: 180,
             duration: 8,
             ease: "none"
+        }, 16)
+        .to("#stefpuim #five", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
         }, 16)
         .to("#stefpuim .bg #stars", {
             opacity: 1,
@@ -201,6 +236,12 @@ function stefpuim(fase) {
             duration: 0.5,
             ease: "none"
         }, 19.5)
+        .to("#stefpuim #six", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 19)
         .to("#stefpuim .bg", {
             background: "rgb(78,33,76)",
             background: "linear-gradient(0deg, rgba(78,33,76,1) 0%, rgba(13,45,92,1) 100%)",
@@ -234,7 +275,6 @@ function stefpuim(fase) {
             duration: .5,
             ease: "none"
         }, 20.5)
-        // 21
         .to("#stefpuim .bg", {
             background: "rgb(34, 34, 34)",
             background: "linear-gradient(0deg, rgba(13,45,92,0) 100%, rgba(0,0,0,0) 100%)",
@@ -277,6 +317,12 @@ function stefpuim(fase) {
             duration: 2,
             ease: "none"
         }, 21)
+        .to("#stefpuim #seven", {
+            fontSize: "1.5rem",
+            opacity: 1,
+            duration: 1,
+            ease: "easeInOut"
+        }, 22)
         .to("#stefpuim .dot", {
             opacity: 0,
             duration: 1,

@@ -21,6 +21,13 @@
         background: linear-gradient(0deg, rgba(13,45,92,1) 0%, rgba(0,0,0,1) 100%);
         overflow: hidden;
 
+        h1 {
+            margin-top: 5%;
+            font-family: Sacramento;
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
         #stars {
             opacity: 0;
             position: absolute;
@@ -31,6 +38,7 @@
             transform: scale(3, 3);
             transform-origin: center center;
             rotate: 0deg;
+            z-index: 1;
         }
 
         .canvasSunMoon {
@@ -95,7 +103,7 @@
 
         .cloud {
             position: absolute;
-            z-index: 3;
+            z-index: 2;
             height: 100%;
             left: -100vw;
         }
@@ -117,7 +125,7 @@
         }
 
         #cloud4 {
-            transform: translate3d(-150%, -20%, 0);
+            transform: translate3d(-80%, -20%, 0);
         }
 
         #cloud5 {
@@ -132,12 +140,55 @@
     .segment {
         position: relative;
         height: 100vh;
-        width: 100%;
+        width: 47%;
+        left: 47vw;
+        text-align: left;
+        opacity: 0;
+        font-size: 1rem;
+
+        h1 {
+            font-size: 8rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            line-height: 8rem;
+            margin-bottom: 10%;
+            margin-left: -2%;
+        }
+
+        h3, h4 {
+            margin-bottom: 10%;
+        }
+
+        p {
+            margin-bottom: 4%;
+        }
+
+        li {
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+
+        a {
+            color: rgb(255, 255, 200);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            z-index: 11;
+
+            &:hover {
+                color: rgb(255, 217, 0);
+            }
+        }
+    }
+
+    #two, #three, #four, #five {
+        color: rgb(34, 34, 34);
+    }
+
+    #seven {
+        text-align: right;
     }
 
     .box {
-        z-index: 10;
-
         .hour {
             position: absolute;
             width: 2%;
@@ -150,7 +201,7 @@
             background-color: gray;
             margin: auto;
             transform-origin: bottom center;
-            z-index: 8;
+            z-index: 4;
             opacity: 0;
         }
 
@@ -166,7 +217,7 @@
             background-color: gray;
             margin: auto;
             transform-origin: bottom center;
-            z-index: 9;
+            z-index: 5;
             opacity: 0;
         }
 
@@ -196,7 +247,7 @@
             background-color: none;
             margin: auto;
             transform-origin: center center;
-            z-index: 7;
+            z-index: 3;
             opacity: 0;
         }
 
@@ -241,7 +292,7 @@
         .label {
             position: absolute;
             font-size: 2vw;
-            z-index: 7;
+            z-index: 3;
             opacity: 0;
         }
 
