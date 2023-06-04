@@ -23,8 +23,109 @@
 
         #stars {
             opacity: 0;
+            position: absolute;
+            top: 150vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale(3, 3);
             transform-origin: center center;
             rotate: 0deg;
+        }
+
+        .canvasSunMoon {
+            height: 300vw;
+            width: 300vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translate3d(-100vw, calc(-150vw + 250vh), 0);
+            transform-origin: center center;
+            rotate: 0deg;
+
+            .sun {
+                position: absolute;
+                height: 5%;
+                width: 5%;
+                top: 47.5%;
+                left: 8%;
+                background-color: rgb(255, 255, 200);
+                box-shadow: 0 0 25px 25px rgb(255, 255, 200), 0 0 50px 25px yellow, 0 0 200px 100px rgb(255, 217, 0), 0 0 500px 0 yellow;
+                border-radius: 100%;
+            }
+
+            .moon {
+                position: absolute;
+                height: 3%;
+                width: 3%;
+                background-color: rgb(233, 233, 233);
+                box-shadow: 0 0 25px 0 rgb(233, 233, 233), 0 0 50px 0 rgb(233, 233, 233);
+                border-radius: 100%;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 100%;
+                    background-image: url(../img/moon.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    opacity: 0.3;
+                }
+            }
+
+            #moon1 {
+                top: 15%;
+                left: 30%;
+            }
+
+            #moon2 {
+                top: 86.5%;
+                left: 50%;
+            }
+        }
+
+        .cloud {
+            position: absolute;
+            z-index: 3;
+            height: 100%;
+            left: -100vw;
+        }
+
+        #cloud4, #cloud5, #cloud6 {
+            height: 120%;
+        }
+
+        #cloud1 {
+            transform: translate3d(-80%, -10%, 0);
+        }
+
+        #cloud2 {
+            transform: translate3d(20%, -10%, 0);
+        }
+
+        #cloud3 {
+            transform: translate3d(30%, 20%, 0);
+        }
+
+        #cloud4 {
+            transform: translate3d(-150%, -20%, 0);
+        }
+
+        #cloud5 {
+            transform: translate3d(-150%, 20%, 0);
+        }
+
+        #cloud6 {
+            transform: translate3d(-60%, -15%, 0);
         }
     }
 

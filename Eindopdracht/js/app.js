@@ -11,7 +11,6 @@ sections.forEach(section => {
   let scrollTween = gsap.to(section, {
       ease: "none", // <-- IMPORTANT!
       scrollTrigger: {
-        markers: true,
         trigger: section,
         onEnter: () => {  enter(section); },
         onLeave: () => {  leave(section); },

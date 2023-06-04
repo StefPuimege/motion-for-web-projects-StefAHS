@@ -37,51 +37,51 @@ function stefpuim(fase) {
             duration: 0.01,
             ease: "none"
         }, 0)
-        .to("#stefpuim .bg #stars", {
-            transform: "translate3d(0, 50%, 0) scale(3)",
-            duration: 0.01,
-            ease: "none"
-        }, 0)
         .to("#stefpuim .dot", {
-            opacity: "1",
+            opacity: 1,
             duration: 1,
             ease: "none"
         }, 0)
         .to("#stefpuim .bg #stars", {
-            opacity: "1",
+            opacity: 1,
             duration: 3,
             ease: "none"
         }, 0)
         .to("#stefpuim .bg #stars", {
-            rotation: "90deg",
+            rotation: 90,
             duration: 8,
+            ease: "none"
+        }, 0)
+        .to("#stefpuim .bg .canvasSunMoon", {
+            rotation: 180,
+            duration: 24,
             ease: "none"
         }, 0)
         // 1
         .to("#stefpuim .hour", {
-            opacity: "1",
+            opacity: 1,
             duration: 2,
             ease: "none"
         }, 1)
         .to("#stefpuim .minute", {
-            opacity: "1",
+            opacity: 1,
             duration: 2,
             ease: "none"
         }, 1)
         .to("#stefpuim .mark", {
-            opacity: "1",
+            opacity: 1,
             duration: 2,
             ease: "none"
         }, 1)
         .to("#stefpuim .label", {
-            opacity: "1",
+            opacity: 1,
             duration: 2,
             ease: "none"
         }, 1)
         // 3
         .to("#stefpuim .box", {
             border: "40px solid white",
-            boxShadow: "0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0.3) inset, 0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0.3)",
+            boxShadow: "0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5) inset, 0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5)",
             duration: 1,
             ease: "none"
         }, 3)
@@ -100,9 +100,39 @@ function stefpuim(fase) {
             duration: 1,
             ease: "none"
         }, 3)
+        .to("#stefpuim .bg #cloud1", {
+            left: "220vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
+        .to("#stefpuim .bg #cloud2", {
+            left: "300vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
+        .to("#stefpuim .bg #cloud3", {
+            left: "200vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
+        .to("#stefpuim .bg #cloud4", {
+            left: "280vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
+        .to("#stefpuim .bg #cloud5", {
+            left: "300vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
+        .to("#stefpuim .bg #cloud6", {
+            left: "250vw",
+            duration: 18,
+            ease: "none"
+        }, 3)
         // 5
         .to("#stefpuim .bg #stars", {
-            opacity: "0",
+            opacity: 0,
             duration: 3,
             ease: "none"
         }, 5)
@@ -138,13 +168,18 @@ function stefpuim(fase) {
             duration: 0.5,
             ease: "none"
         }, 7)
+        .to("#stefpuim .box", {
+            boxShadow: "-0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5) inset, -0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0.5)", // Schaduw verandert mee met de stand van de zon
+            duration: 6,
+            ease: "none"
+        }, 9)
         .to("#stefpuim .bg #stars", {
-            rotation: "180deg",
+            rotation: 180,
             duration: 8,
             ease: "none"
         }, 16)
         .to("#stefpuim .bg #stars", {
-            opacity: "1",
+            opacity: 1,
             duration: 3,
             ease: "none"
         }, 18.5)
@@ -174,7 +209,7 @@ function stefpuim(fase) {
         }, 20)
         .to("#stefpuim .box", {
             border: "0px solid white",
-            boxShadow: "0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0) inset, 0.4vh 0.6vh 1.6vh 0 rgba(0, 0, 0, 0)",
+            boxShadow: "0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0) inset, 0.5vh 0.7vh 2vh 0 rgba(0, 0, 0, 0)",
             duration: 1,
             ease: "none"
         }, 20)
@@ -206,8 +241,8 @@ function stefpuim(fase) {
             duration: 3,
             ease: "none"
         }, 21)
-        .to("#stefpuim .bg #stars", {
-            opacity: "0",
+        .to("#stefpuim .bg", {
+            opacity: 0,
             duration: 3,
             ease: "none"
         }, 21)
@@ -223,27 +258,27 @@ function stefpuim(fase) {
             ease: "none"
         }, 21)
         .to("#stefpuim .hour", {
-            opacity: "0",
+            opacity: 0,
             duration: 2,
             ease: "none"
         }, 21)
         .to("#stefpuim .minute", {
-            opacity: "0",
+            opacity: 0,
             duration: 2,
             ease: "none"
         }, 21)
         .to("#stefpuim .mark", {
-            opacity: "0",
+            opacity: 0,
             duration: 2,
             ease: "none"
         }, 21)
         .to("#stefpuim .label", {
-            opacity: "0",
+            opacity: 0,
             duration: 2,
             ease: "none"
         }, 21)
         .to("#stefpuim .dot", {
-            opacity: "0",
+            opacity: 0,
             duration: 1,
             ease: "none"
         }, 23);
